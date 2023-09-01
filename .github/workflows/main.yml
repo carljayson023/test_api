@@ -18,6 +18,9 @@ jobs:
         with:
           dotnet-version: 6.0.x  # Replace with the version you are using
 
+      - name: Restore
+        run: dotnet restore ./test_api.sln
+      
       - name: Build application
         run: dotnet build --configuration Release
 
