@@ -22,7 +22,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish application
-        run: dotnet publish "path/to/test_api/test_api.csproj" --configuration Release --output "published-app"
+        run: dotnet publish "test_api/test_api.csproj" --configuration Release --output "published-app"
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
