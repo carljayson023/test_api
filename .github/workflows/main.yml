@@ -27,9 +27,9 @@ jobs:
       - name: Publish application
         run: dotnet publish "test_api/test_api.csproj" --configuration Release --output "published-app"
 
-      - name: Deploy to Azure
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: "test_api"  # Replace with your Azure app's name
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-          package: "published-app"
+      #- name: Deploy to Azure
+      #  uses: azure/webapps-deploy@v2
+      #  with:
+      #    app-name: "test_api"  # Replace with your Azure app's name
+      #    publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+      #    package: "published-app"
